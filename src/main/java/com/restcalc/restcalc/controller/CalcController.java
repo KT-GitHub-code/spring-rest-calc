@@ -20,22 +20,22 @@ public class CalcController {
 
     @PostMapping("/add")
     public int add(@RequestBody int[] nums){
-        return 0;
+        return calcService.add(nums[0], nums[1]);
     }
 
     @PostMapping("/subtract")
     public int subtract(@RequestBody int[] nums){
-        return 0;
+        return calcService.subtract(nums[0], nums[1]);
     }
 
     @PostMapping("/multiply")
     public int multiply(@RequestBody int[] nums){
-        return 0;
+        return calcService.multiply(nums[0], nums[1]);
     }
 
     @PostMapping("/divide")
     public double divide(@RequestBody int[] nums){
-        return 0.0;
+        return calcService.divide(nums[0], nums[1]);
     }
 
 }
