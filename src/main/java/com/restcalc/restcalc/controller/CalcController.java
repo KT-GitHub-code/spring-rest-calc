@@ -15,7 +15,7 @@ public class CalcController {
 
     @GetMapping()
     public String index(){
-        return "Welcome to the calculator app!";
+        return "Welcome to the calculator app! To do calculations POST an array of two numbers to the following routes: /add, /subtract, /multiply, /divide.\"";
     }
 
     @PostMapping("/add")
