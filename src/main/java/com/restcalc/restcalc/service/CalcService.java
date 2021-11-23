@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class CalcService {
 
+    //basic operations methods
     public int add(int a, int b){
         return a+b;
     }
