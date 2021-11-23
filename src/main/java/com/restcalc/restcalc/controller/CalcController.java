@@ -10,14 +10,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CalcController {
 
+    //field injection of CalcService dependency (DI)
     @Autowired
     public CalcService calcService;
 
+    //GET index route
     @GetMapping()
     public String index(){
         return "Welcome to the calculator app! To do calculations POST an array of two numbers to the following routes: /add, /subtract, /multiply, /divide.\"";
     }
 
+    //POST routes for operations
     @PostMapping("/add")
     public int add(@RequestBody int[] nums){
         return calcService.add(nums[0], nums[1]);
